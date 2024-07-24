@@ -3,10 +3,35 @@
 <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+
+                        <h1 class="mt-4">Edit Product</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Fill Detials</li>
                         </ol>
+
+                        <div class="card">
+                        <h1>Edit Product</h1>
+                       <form action="{{ route('products.store') }}" method="post">
+                       @csrf
+                       <div>
+                      <label>Name:</label>
+                     <input type="text" name="name">
+                    </div>
+                <div>
+            <label>Description:</label>
+        <textarea name="description"></textarea>
+      </div>
+    <div>
+    <label>Price:</label>
+   <input type="text" name="price">
+</div>
+<button type="submit">Create</button>
+</form>
+
+
+ <table>
+                     </table>
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
@@ -26,4 +51,6 @@
 
     </body>
 </html>
+
 @endsection
+
